@@ -474,7 +474,7 @@ export default function ResearchTriangulator() {
       setCurrentAgentName(agent.name);
       setAgentStatuses(prev => ({ ...prev, [agent.id]: "running" }));
       try {
-        const res = await fetch("https://api.anthropic.com/v1/messages", {
+        const res = await fetch("https://research-triangulator.vercel.app/api/analyze", {
           method: "POST", headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ model: MODEL, max_tokens: 1000, messages: [{ role: "user", content: agent.task(topic) }] })
         });
@@ -492,7 +492,7 @@ export default function ResearchTriangulator() {
     setCurrentAgentName("Claude");
     setAgentStatuses(prev => ({ ...prev, claude: "running" }));
     try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("https://research-triangulator.vercel.app/api/analyze", {
         method: "POST", headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ model: MODEL, max_tokens: 1000, messages: [{ role: "user", content: claudeAgent.task(topic, outputs) }] })
       });
