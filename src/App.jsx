@@ -513,7 +513,7 @@ export default function ResearchTriangulator() {
   const SUGGESTIONS = ["AI impact on jobs 2025","Quantum computing breakthroughs","Climate change solutions","CRISPR gene editing ethics","Nuclear fusion energy","SpaceX Mars mission","Longevity & anti-aging science","Decentralized finance & Web3"];
 
   return (
-    <div style={{ background: "#060612", minHeight: "100vh", color: "#e0e0f0", fontFamily: "'DM Sans', sans-serif", position: "relative", overflow: "hidden" }}>
+    <div style={{ background: "#060612", minHeight: "100vh", width: "100%",color: "#e0e0f0", fontFamily: "'DM Sans', sans-serif", position: "relative", overflow: "hidden" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap');
         @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
